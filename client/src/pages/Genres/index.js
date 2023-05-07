@@ -4,7 +4,7 @@ import GenreList from '../../components/GenreList'
 const index = () => {
     return (
             <>
-                <GenreList/>
+                <GenreList />
             </>
     )
 }
