@@ -14,9 +14,9 @@ const GenreList = () => {
     }, []);
 
 
-    return (  
+    return (
         <div className="row">
-            {genres.map((genre,index) => (
+            {genres.map((genre, index) => (
                 <div className="card" key={index}>
                     <div className="card-bodt text-center">
                         <Link to={`/genres/${genre.id}`}>{genre.genre_name}</Link>
@@ -25,6 +25,6 @@ const GenreList = () => {
             ))}
         </div>
     )
-}
+};
 
 export default GenreList
