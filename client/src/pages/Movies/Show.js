@@ -1,5 +1,5 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const MovieDetail = () => {
     let { id } = useParams();
@@ -33,4 +33,4 @@ const MovieDetail = () => {
     )
 }
 
-export default MovieDetail;
+export default ShowMovie;
