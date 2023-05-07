@@ -1,5 +1,4 @@
 /*third party */
-import React from 'react';
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
 
@@ -11,8 +10,8 @@ const GenreList = () => {
             { id: 1, genre_name: 'Action' },
             { id: 2, genre_name: 'Comedy' },
             { id: 3, genre_name: 'Crime' },
-        ])
-    }, [])
+        ]);
+    }, []);
 
 
     return (  
