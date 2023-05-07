@@ -5,16 +5,16 @@ const MovieList = () => {
     //const id = 1;
     useEffect(() => {
         setMovies([
-            { id: 1, tittle: 'Spongebob Squarepants', runtime: 145 },
-            { id: 1, tittle: 'Ogry', runtime: 145 },
-            { id: 1, tittle: 'Chalk Zone', runtime: 145 },
+            { id: 1, title: 'Spongebob Squarepants', runtime: 145 },
+            { id: 1, title: 'Ogry', runtime: 145 },
+            { id: 1, title: 'Chalk Zone', runtime: 145 },
         ]);
     }, []);
 
 
     return (
         <div className="row">
-            {movies.map((movie) =>  (
+            {movies.map((movie,index) =>  (
             <div className="col-sm-4 mb-2" key={index}>
                 <div className="card">
                     <div className="card-body">
