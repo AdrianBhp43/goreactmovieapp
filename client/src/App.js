@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Menu from './components/Menu';
 import Home from './pages/Home';
 import Movies from './pages/Movies';
-import MovieDetail from './components/movies/MovieDetail';
+import ShowMovie from './pages/Movies'
+//import MovieDetail from './components/movies/MovieDetail';
 import Genres from './pages/Genres';
 import Admin from './pages/Admin';
 
@@ -29,7 +30,7 @@ function App() {
         <div className="col-10">
             <Routes>
               <Route path='/' element={<Home /> } />
-              <Route exact path='/movies/:id' element={<MovieDetail />} />
+              <Route exact path='/movies/:id' element={<ShowMovie />} />
               <Route path='/movies' element={<Movies />} />
               <Route path='/genres' element={<Genres /> } />
               <Route path='/admin' element={<Admin /> } />
