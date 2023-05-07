@@ -3,11 +3,9 @@ import GenreList from '../../components/GenreList'
 
 const index = () => {
     return (
-        <div>
             <>
                 <GenreList/>
             </>
-        </div>
     )
 }
 
