@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Menu from './components/Menu';
 import Home from './pages/Home';
 import Movies from './pages/Movies';
-import ShowMovie from './pages/Movies/Show'
+import ShowMovie from './pages/Movies/Show';
 //import MovieDetail from './components/movies/MovieDetail';
 import Genres from './pages/Genres';
 import Admin from './pages/Admin';
