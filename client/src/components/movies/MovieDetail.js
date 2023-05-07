@@ -1,9 +1,11 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const MovieDetail = () => {
+    let { id } = useParams();
     return (
         <>
-            <h2>Movie: </h2>
+            <h2>Movie: {id} </h2>
 
             <div className="float-start">
                 <small>Rating:</small>
