@@ -17,12 +17,14 @@ const GenreList = () => {
     return (
         <div className="row">
             {genres.map((genre, index) => (
+                <div className= "col-sm-2 mb-4">
                 <div className="card" key={index}>
                     <div className="card-bodt text-center">
                         <Link to={`/genres/${genre.id}`}>{genre.genre_name}</Link>
                     </div>
+                 </div>
                 </div>
-            ))}
+    ))}
         </div>
     )
 };
