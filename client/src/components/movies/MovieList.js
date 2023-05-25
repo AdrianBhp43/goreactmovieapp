@@ -7,8 +7,8 @@ const MovieList = () => {
     useEffect(() => {
         setMovies([
             { id: 1, title: 'Spongebob Squarepants', runtime: 145 },
-            { id: 1, title: 'Ogry', runtime: 145 },
-            { id: 1, title: 'Chalk Zone', runtime: 145 },
+            { id: 2, title: 'Ogry', runtime: 145 },
+            { id: 3  , title: 'Chalk Zone', runtime: 145 },
         ]);
     }, []);
 
@@ -24,7 +24,7 @@ const MovieList = () => {
                             With supporting text below as a natural lead-in to additional content.
                         </p>
                         <Link to={`/movies/${movie.id}`} className="btn btn-primary">
-                            Go somewhere
+                            Read more
                         </Link>
                     </div>
                 </div>

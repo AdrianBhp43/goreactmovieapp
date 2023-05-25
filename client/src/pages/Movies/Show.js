@@ -33,4 +33,4 @@ const MovieDetail = () => {
     )
 }
 
-export default ShowMovie;
+export default MovieDetail;
