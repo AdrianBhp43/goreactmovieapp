@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MovieList = () => {
     const [movies, setMovies] = useState([]);
-    //const id = 1;
+    
     useEffect(() => {
         setMovies([
             { id: 1, title: 'Spongebob Squarepants', runtime: 145 },
