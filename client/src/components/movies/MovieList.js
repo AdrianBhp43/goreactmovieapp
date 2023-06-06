@@ -3,23 +3,22 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const MovieList = () => {
-    //Error Message
-    const [movies, setMovies] = useState([]);
-    const [loaded, setLoaded] = useState(false);
-    const [errorMessage, setErrorMessage] = useState(null)
+	const [movies, setMovies] = useState([]);
+	const [loaded, setLoaded] = useState(false);
+	const [errorMessage, setErrorMessage] = useState(null);
 
-    useEffect(() => {
-        const fetchMovies = async () => {
-            try {
-                const result = await axios(`http://localhost:4000/movies`)
-                await setMovies(result.data.movies)
-                setLoaded(true);
-            } catch (err) {
-                setErrorMessage(err.response.data)
-            }
-        };
-        fetchMovies();
-    }, []);
+	useEffect(() => {
+		const fetchMovies = async () => {
+			try {
+				const result = await axios(`http://localhost:4000/movies`);
+				await setMovies(result.data.movies);
+				setLoaded(true);
+			} catch (err) {
+				setErrorMessage(err.response.data);
+			}
+		};
+		fetchMovies();
+	}, []);
 
 
     return (
