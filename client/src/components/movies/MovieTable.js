@@ -16,24 +16,40 @@ const MovieTable = () => {
 			'http://localhost:4000/admin/movies/delete',
 			JSON.stringify(payload)
 		);
+		setMovies([]);
+		fetchMovies();
 	};
 
-	useEffect(() => {
-		const fetchMovies = async () => {
+	const fetchMovies = async () => {
 			try {
 				const result = await axios(`http://localhost:4000/movies`);
-				await setMovies(result.data.movies);
-				setLoaded(true);
+				if (result.data.movies !== null) {
+					await setMovies(result.data.movies);
+					setLoaded(true);
+				} else {
+					setErrorMessage("data not found!");
+				}
 			} catch (err) {
 				setErrorMessage(err.response.data);
 			}
-		};
+	};
+	
+	useEffect(() => {
 		fetchMovies();
 	}, []);
 
 
     return (
-        <>
+		<>
+                    <div className='row'>
+				        <div className='col-12'>
+                            <Link to={'/admin/movies/create'}
+                                className='btn btn-sm btn-primary'
+                            >
+						        Add
+					    </Link>
+				    </div>
+			</div>  
             {!loaded ? ( 
                 (() => {
                     if (errorMessage) {
@@ -51,16 +67,6 @@ const MovieTable = () => {
                     }
                 })()
             ) : (
-                    <>
-                    <div className='row'>
-				        <div className='col-12'>
-                            <Link to={'/admin/movies/create'}
-                                className='btn btn-sm btn-primary'
-                            >
-						        Add
-					    </Link>
-				    </div>
-			</div>  
 					<div className='row'>
 						<div className='col-12'>
 							<table className='table'>
@@ -118,7 +124,6 @@ const MovieTable = () => {
 							</table>
 						</div>
 					</div>
-				</>
 			)}
 		</>
 	);
